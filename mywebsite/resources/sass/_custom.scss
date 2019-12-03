@@ -1,0 +1,153 @@
+/**/
+html{
+    min-width: 100%;
+    min-height: 100%;
+    overflow: auto;
+}
+
+body{
+ 
+    min-width: 100%;
+    min-height: 100%;
+
+    padding: 0px;
+    margin: 0px;
+
+   color: white;
+   }
+ 
+
+   .parallax {
+    /* The image used */
+    background-image: url("http://mywebsite.com/images/back.jpeg");
+  
+
+    /* Set a specific height min-height: 700px;  */
+    min-height: 100%; 
+  
+    /*  Create the parallax scrolling effect */  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-bottom: 10px;
+
+    .par-txt{
+
+        text-align: center;
+        padding-top: 30%;
+
+        h1{
+          margin-bottom: 30%;
+        }
+    }
+  }
+
+   
+
+.fl-container{
+
+    height: -webkit-fill-available; 
+    width: 100%;
+    display : flex;
+    flex-direction: column; 
+    
+   
+   .fl-item{
+     width: 100%; 
+      flex: 1; 
+    display: flex; 
+    justify-content: center; 
+     flex-direction: column; 
+      padding-left: 3%; 
+
+      .content-container{
+
+        font-size: 1.2em;
+        margin-top: -5rem !important;
+        border-style: solid;
+        border-width: medium;
+        border-color: royalblue;
+        border-radius: 7px;
+
+        background-color: cornflowerblue;
+        width: 65% !important;
+        margin-left: 15%;
+        margin-right: auto;
+        margin-top: 0px;
+
+        h2{
+          text-align: -webkit-center;
+          padding-bottom: 5%;
+          padding-top: 7%;
+        }
+
+        h3{
+          text-align: -webkit-center;
+          padding-bottom: 3%;
+        }
+
+        h4{
+          text-align: -webkit-center;
+          padding-bottom: 3%;
+        }
+
+        p{
+          padding: 4%;
+        }
+      
+      }
+  
+
+      
+   }
+
+   .green{
+        background-color: #377937;
+        color: black !important;
+   }
+
+   
+
+}
+
+ 
+
+.listStyle{
+  list-style: none;
+  display: flex;
+
+.linku{
+  color: white;
+  text-decoration: none;
+}
+}
+
+ 
+.slideshow-container{
+
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-bottom: 3%;
+
+    .show-info{
+
+      background-color: blue;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding-top: 3%;
+      margin-bottom: 5%;
+    }
+
+    .hide-info {
+      display: none;
+  }
+}
+
+
+
+
+
+
