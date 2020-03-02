@@ -17,6 +17,7 @@ class DashboardController extends Controller
         $id = $this -> checkCodeInjecten( $id );
         
         $project =  DB::table('projets')->where('id', '=', $id )->get();
+        //  $project = DB::select('select * from projets where id = ' . $id );
          return view('pages.editProj') -> with('projects', $project );
         
     }
@@ -163,11 +164,12 @@ class DashboardController extends Controller
 
   $file = $request -> file('img');
    $fileExtension = $file -> getClientOriginalExtension();
+   $newFileExtension = strtolower( $fileExtension );
   // $fileExtension = $file->getClientMimeType();
 
-  if( $fileExtension == 'png' || $fileExtension == 'jpg' || $fileExtension == 'gif' || $fileExtension == 'svg' ){
+  if( $newFileExtension == 'png' || $newFileExtension == 'jpg' || $newFileExtension == 'gif' || $newFileExtension == 'svg' ){
      $path = $request -> file('img') -> store('images');
-     DB::insert('insert into projets ( Titulli, pershkrimi, pathi) values (?, ?, ?)', [ $title, $pershkrimi, $path ]);
+     DB::insert('insert into "projets" ( "Titulli", "pershkrimi", "pathi" ) values (?, ?, ?)', [ $title, $pershkrimi, $path ]);
 
      return view("pages.statusResponse") ->with('res', ' Success ' ) ;
   }else{
